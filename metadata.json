@@ -1,0 +1,5 @@
+{
+  "name": "Dual-Mode Job Application Assistant",
+  "description": "A hybrid browser extension prototype that supports both rapid, one-click job applications ('Speed-Runner' mode) and detailed, field-by-field guided applications ('Perfectionist' mode), while emphasizing local data privacy.",
+  "requestFramePermissions": []
+}

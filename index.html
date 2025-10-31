@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dual-Mode Job Application Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            keyframes: {
+              'subtle-pulse': {
+                '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+                '50%': { transform: 'scale(1.05)', opacity: '0.8' },
+              },
+              'fade-in': {
+                '0%': { opacity: '0', transform: 'translateY(-10px) scale(0.98)' },
+                '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+              },
+              'attention-flash': {
+                '0%, 100%': { boxShadow: '0 0 0 0 rgba(59, 130, 246, 0)', transform: 'scale(1)' },
+                '50%': { boxShadow: '0 0 0 10px rgba(59, 130, 246, 0.4)', transform: 'scale(1.02)' },
+              },
+              'highlight-scroll': {
+                '0%, 100%': { 'box-shadow': '0 0 0 0 rgba(59, 130, 246, 0)', 'background-color': 'transparent' },
+                '50%': { 'box-shadow': '0 0 0 4px rgba(59, 130, 246, 0.5)', 'background-color': 'rgba(59, 130, 246, 0.1)' },
+              }
+            },
+            animation: {
+              'subtle-pulse': 'subtle-pulse 2s ease-in-out infinite',
+              'fade-in': 'fade-in 0.2s ease-out forwards',
+              'attention-flash': 'attention-flash 1s ease-in-out 2',
+              'highlight-scroll': 'highlight-scroll 1.5s ease-in-out',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-50">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
